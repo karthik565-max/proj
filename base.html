@@ -1,0 +1,44 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SeaGro{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/">SeaGro</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/job_board">Job Board</a></li>
+                <li><a href="/learning_center">Learning Center</a></li>
+                <li><a href="/community">Community</a></li>
+                <li><a href="/bike_sharing">Bike Sharing</a></li>
+                <li><a href="/tech_news">Tech News</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/content_sharing">Content Sharing</a></li>
+                <li><a href="/todo_list">To-Do</a></li>
+            </ul>
+        </nav>
+        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    </header>    
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SeaGro. All rights reserved. Contact us at <a href="mailto:support@seagro.com">support@seagro.com</a>.</p>
+    </footer>
+</body>
+</html>
